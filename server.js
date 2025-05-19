@@ -17,8 +17,13 @@ const app = express();
 app.use(express.json())
 
 // Middlewares
+const allowedOrigins = [
+   'http://localhost:5173', 
+   'https://icy-coast-08361f410.6.azurestaticapps.net'
+];
+
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: allowedOrigins,
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 }));
