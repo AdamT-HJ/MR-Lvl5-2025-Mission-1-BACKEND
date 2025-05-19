@@ -5,7 +5,9 @@ const cors = require('cors');
 const multer = require('multer');
 const axios = require('axios');
 
-const mysql = require('mysql');
+
+// In case of adding MySql Database later
+// const mysql = require('mysql');
 
 
 
@@ -39,7 +41,7 @@ const AZURE_CUSTOM_VISION_KEY = process.env.AZURE_CUSTOM_VISION_KEY;
 //Database Config
 
 
-//Endpoints
+//---------ENDPOINTS-------------//
 
 //test
 app.get('/', (req, res) => {
