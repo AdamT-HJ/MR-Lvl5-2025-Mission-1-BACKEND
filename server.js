@@ -43,7 +43,7 @@ const AZURE_CUSTOM_VISION_ENDPOINT = process.env.AZURE_CUSTOM_VISION_ENDPOINT;
 const AZURE_CUSTOM_VISION_KEY = process.env.AZURE_CUSTOM_VISION_KEY;
 
 
-//Database Config
+//Database Config if required
 
 
 //---------ENDPOINTS-------------//
@@ -74,10 +74,10 @@ app.post('/api/classify-image', upload.single('image'), async(req, res) => {
             imageBuffer,
             {
                 headers: {
-                    'Content-Type': 'application/octet-stream', //for binary image upload
+                    'Content-Type': 'application/octet-stream', 
                     'Prediction-Key': AZURE_CUSTOM_VISION_KEY 
                 },
-                maxBodyLength: Infinity, //to handle large uploads
+                maxBodyLength: Infinity, 
                 maxContentLength: Infinity
             }
         );
